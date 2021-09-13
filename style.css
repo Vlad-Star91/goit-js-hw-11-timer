@@ -58,6 +58,7 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 50%;
   margin-right: 5px;
 }
 .stop {
@@ -66,4 +67,5 @@ body {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 50%;
 }
