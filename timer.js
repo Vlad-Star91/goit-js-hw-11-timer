@@ -28,10 +28,10 @@ class CountdownTimer {
         secsRef.textContent = this.pad(Math.floor((time % (1000 * 60)) / 1000));
     }
     start() {
+        this.getRefs().btnStart.disabled = true;
         this.intervalId = setInterval(() => {
             this.updateTimer(this.getRefs())
         }, 1000);
-        this.getRefs().btnStart.disabled = true;
         this.getRefs().btnStop.disabled = false;
     }
     stop() {
@@ -47,12 +47,12 @@ class CountdownTimer {
 
 const timer = new CountdownTimer({
   selector: '#timer-1',
-  targetDate: new Date('Sep 17, 2021'),
+  targetDate: new Date('Nov 18, 2021'),
 });
-const timer2 = new CountdownTimer({
-  selector: '#timer-2',
-  targetDate: new Date('Sep 25, 2021'),
-});
+// const timer2 = new CountdownTimer({
+//   selector: '#timer-2',
+//   targetDate: new Date('Sep 25, 2021'),
+// });
 console.log(timer);
 // timer.start();
 // timer2.start();
